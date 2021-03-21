@@ -1,0 +1,8 @@
+.treeNode {
+    cursor: pointer;
+}
+
+svg {
+    display: block;
+    margin: auto
+}
