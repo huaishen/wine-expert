@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+		<title>Smoothed D3.js Radar Chart</title>
+
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+		<!-- D3.js -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script> -->
+		<script src="https://d3js.org/d3.v6.js"></script>
+		
+		<style>
+			body {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 11px;
+				font-weight: 300;
+				fill: #242424;
+				text-align: center;
+				text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+				cursor: default;
+			}
+			
+			.legend {
+				font-family: 'Raleway', sans-serif;
+				fill: #333333;
+			}
+			
+			.tooltip {
+				fill: #333333;
+			}
+		</style>
+	
+	</head>
+	<body>
+
+		<div>
+			<button id='addEntry'>Add Entry</button>
+			<button id='removeEntry'>Remove Entry</button>
+		</div>
+		<div class="radarChart"></div>
+
+		<script src="radarChart.js"></script>	
+		<script>
+      
+      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+      
+			////////////////////////////////////////////////////////////// 
+			//////////////////////// Set-Up ////////////////////////////// 
+			////////////////////////////////////////////////////////////// 
+
+			var margin = {top: 100, right: 100, bottom: 100, left: 100},
+				width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+					
+			////////////////////////////////////////////////////////////// 
+			//////////////////// Draw the Chart ////////////////////////// 
+			////////////////////////////////////////////////////////////// 
+
+
+			d3.csv('vivino_wines.csv')
+            .then((dataset) => {
+
+
+				new_data = []
+				parseF = str => (str ? parseFloat(str) : 0)
+				parseS = str => (str ? str : 'Unknown')
+
+
+
+				// filter entry with empty value
+				sum = (a, b) => a+b
+				valid = d => (labels.map(l => (d[l] ? 1 : 0)).reduce(sum, 0) >= labels.length)
+				dataset = dataset.filter(d => valid(d))
+
+
+				// build scales
+				let range = 0.03
+				scales = {}
+				labels.map(l => {
+					let sorted = dataset.map(d => d[l])
+						.filter(v => v)
+						.sort((a, b) => a-b)
+
+					scales[l] = d3.scaleLinear()
+						// .domain([d3.min(dataset, (d) => parseF(d[l])),
+						// 		d3.max(dataset, (d) => parseF(d[l]))])
+						.domain([d3.min(dataset, (d) => parseF(sorted[Math.floor(sorted.length*range)])),
+								d3.max(dataset, (d) => parseF(sorted[Math.floor(sorted.length*(1-range))]))])
+						.range([0.1, 1])
+				})
+
+				d3.select("#addEntry").on('click', function() {
+					if (new_data.length < 6) {
+						let i = Math.floor(Math.random() * dataset.length)
+						let d = dataset[i]
+						// console.log(d)
+						new_data.push(labels.map(l => {
+							let lowbound = 0, upbound = 1.1
+							let value = scales[l](parseF(d[l]))
+							value = Math.min(Math.max(value, lowbound), upbound)
+							return {axis:l, value:value, actValue:parseS(d[l])}
+						}))
+						RadarChart(".radarChart", new_data, radarChartOptions);
+					}
+					return new_data
+				})
+
+				d3.select("#removeEntry").on('click', function() {
+					let i = new_data.length-1
+					new_data.splice(i, 1)
+					RadarChart(".radarChart", new_data, radarChartOptions);
+					return new_data
+				})
+
+				RadarChart(".radarChart", new_data, radarChartOptions);
+			})
+
+			var labels = ['rating', 'price', 'sweetness', 'intensity', 'tannin', 'acidity']
+
+			
+			var color = d3.scaleOrdinal().range(d3.schemeCategory10)
+			// console.log(color)
+
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 0.5,
+			  levels: 1,
+			  roundStrokes: true,
+			  color: color,
+			  labels: labels
+			};
+
+
+
+		</script>
+	</body>
+</html>
