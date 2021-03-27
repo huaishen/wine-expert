@@ -82,7 +82,7 @@ export default class TreeChart extends Component {
                 .attr("stroke", 'black')
                 .attr("stroke-width", 1)
                 .attr("r", 3.5)
-                .attr("opacity", d => d.data.name === self.props.name? 1 : 0.6)
+                .attr("opacity", d => d.data.name === self.props.name? 1 : 0.4)
                 .on('click', (_, d)=> self.props.parentCallback(d.data.name, d.depth));
 
             g.append("g")

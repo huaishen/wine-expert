@@ -35,7 +35,7 @@ ListItemLink.propTypes = {
 
 const useStyles = makeStyles({
     root: {
-        width: 360,
+        width: 250,
     },
 });
 
@@ -47,6 +47,8 @@ export default function ListRouter() {
             <Paper elevation={0}>
                 <List aria-label="main">
                     <ListItemLink to="/map" primary="Wine Map" icon={<i className="iconfont icon-map"/>}/>
+                    <ListItemLink to="/radar" primary="Taste Radar" icon={<i className="iconfont icon-radar"/>}/>
+                    <ListItemLink to="/tree" primary="Grape-Style Chord" icon={<i className="iconfont icon-tp_radial"/>}/>
                 </List>
             </Paper>
         </div>

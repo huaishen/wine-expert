@@ -16,6 +16,8 @@ import { Route, MemoryRouter, Switch } from 'react-router';
 
 import Links from './components/navBar'
 import WineMap from './components/map'
+import StyleRadar from './components/radar'
+import RadialTree from './components/radialTree'
 
 const drawerWidth = 240;
 
@@ -153,6 +155,12 @@ export default function App() {
                 <Switch>
                     <Route path='/map'>
                         <WineMap/>
+                    </Route>
+                    <Route path='/radar'>
+                        <StyleRadar/>
+                    </Route>
+                    <Route path='/tree'>
+                        <RadialTree/>
                     </Route>
                 </Switch>
                 </Container>

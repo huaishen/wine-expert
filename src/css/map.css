@@ -27,3 +27,24 @@
     margin: 0 0 5px;
     color: #777;
 }
+
+.marker {
+    width: 10px;
+    height: 10px;
+}
+
+.category-1{
+    fill: #F88;
+    stroke: #800;
+    background: #F88;
+    border-color: #800;
+}
+
+.marker-cluster-pie g.arc{
+    fill-opacity: 0.5;
+}
+.marker-cluster-pie-label {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+}

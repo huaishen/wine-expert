@@ -1,0 +1,224 @@
+index,name,grapes,type
+0,Tawny Port,Touriga Nacional,Fortified
+1,Tawny Port,Touriga Franca,Fortified
+2,Tawny Port,Tinta Roriz,Fortified
+3,Ruby Port,Touriga Nacional,Fortified
+4,Ruby Port,Touriga Franca,Fortified
+5,Ruby Port,Tinta Roriz,Fortified
+6,Late Bottled Vintage Port,Touriga Nacional,Fortified
+7,Late Bottled Vintage Port,Touriga Franca,Fortified
+8,Late Bottled Vintage Port,Tinta Roriz,Fortified
+9,Spanish Pedro Ximenez,Pedro Ximenez,Fortified
+10,Vintage Port,Touriga Nacional,Fortified
+11,Vintage Port,Touriga Franca,Fortified
+12,Vintage Port,Tinta Roriz,Fortified
+13,Portuguese Madeira,Verdelho,Fortified
+14,Portuguese Madeira,Sercial,Fortified
+15,Portuguese Madeira,Malmsey,Fortified
+16,Portuguese Madeira,Boal Branco,Fortified
+17,Portuguese Madeira,Terrantez,Fortified
+18,Spanish Sherry,Palomino,Fortified
+19,Spanish Sherry,Moscato,Fortified
+20,Spanish Sherry,Pedro Ximenez,Fortified
+21,Colheita Port,Touriga Nacional,Fortified
+22,Colheita Port,Touriga Franca,Fortified
+23,Colheita Port,Tinta Roriz,Fortified
+24,Bordeaux Sauternes,Sauvignon Blanc,Dessert
+25,Bordeaux Sauternes,Sémillon,Dessert
+26,Bordeaux Sauternes,Muscadelle,Dessert
+27,Southern Italy White,Malvasia,Dessert
+28,Southern Italy White,Fiano,Dessert
+29,Southern Italy White,Catarratto Bianco,Dessert
+30,Provence Rosé,Shiraz/Syrah,Rose
+31,Provence Rosé,Grenache,Rose
+32,Provence Rosé,Cinsault,Rose
+33,Languedoc-Roussillon Rosé,Shiraz/Syrah,Rose
+34,Languedoc-Roussillon Rosé,Grenache,Rose
+35,Languedoc-Roussillon Rosé,Mourvedre,Rose
+36,Southern Rhône Rosé,Shiraz/Syrah,Rose
+37,Southern Rhône Rosé,Grenache,Rose
+38,Southern Rhône Rosé,Mourvedre,Rose
+39,French Champagne,Chardonnay,Sparkling
+40,French Champagne,Pinot Noir,Sparkling
+41,French Champagne,Pinot Meunier,Sparkling
+42,Italian Asti,Moscato,Sparkling
+43,Spanish Cava,Xarel-lo,Sparkling
+44,Spanish Cava,Parellada,Sparkling
+45,Spanish Cava,Trepat,Sparkling
+46,Spanish Cava,Viura,Sparkling
+47,Italian Prosecco,Glera (Prosecco),Sparkling
+48,English Sparkling,Chardonnay,Sparkling
+49,English Sparkling,Pinot Noir,Sparkling
+50,English Sparkling,Pinot Meunier,Sparkling
+51,Italian Moscato d'Asti,Moscatel de grano menudo,Sparkling
+52,German Müller Thurgau,Müller-Thurgau,Sparkling
+53,New Zealand Sauvignon Blanc,Sauvignon Blanc,White
+54,Spanish Verdejo,Verdejo,White
+55,Southern Rhône White,Viognier,White
+56,Southern Rhône White,Roussanne,White
+57,Southern Rhône White,Marsanne,White
+58,Southern Rhône White,Grenache Blanc,White
+59,Southern Rhône White,Clairette,White
+60,Southern Rhône White,Bourboulenc,White
+61,Californian Chardonnay,Chardonnay,White
+62,Northern Italy Pinot Grigio,Pinot Grigio,White
+63,Washington State Chardonnay,Chardonnay,White
+64,Chilean Chardonnay,Chardonnay,White
+65,Spanish Albariño,Albariño,White
+66,Southern Italy White,Malvasia,White
+67,Southern Italy White,Fiano,White
+68,Southern Italy White,Catarratto Bianco,White
+69,Argentinian Chardonnay,Chardonnay,White
+70,Alsace Gewürztraminer,Gewürztraminer,White
+71,Central Italy White,Trebbiano,White
+72,Chilean Sauvignon Blanc,Sauvignon Blanc,White
+73,Northern Italy White,Arneis,White
+74,Northern Italy White,Pinot Blanc,White
+75,Northern Italy White,Cortese,White
+76,Northern Italy White,Tocai Friulano,White
+77,German Riesling,Riesling,White
+78,Burgundy Chablis,Chardonnay,White
+79,Burgundy Macônnais White,Chardonnay,White
+80,Burgundy Macônnais White,Aligoté,White
+81,Upper Loire White,Chenin Blanc,White
+82,Upper Loire White,Sauvignon Blanc,White
+83,Napa Valley Chardonnay,Chardonnay,White
+84,Argentinian Torrontés,Torrontés,White
+85,Bordeaux White,Sauvignon Blanc,White
+86,Bordeaux White,Sémillon,White
+87,Bordeaux White,Muscadelle,White
+88,Italian Soave,Trebbiano,White
+89,Italian Soave,Garganega,White
+90,Alsace Riesling,Riesling,White
+91,South African Chardonnay,Chardonnay,White
+92,Italian Gavi,Cortese,White
+93,Burgundy White,Chardonnay,White
+94,Spanish Chardonnay,Chardonnay,White
+95,South African Chenin Blanc,Chenin Blanc,White
+96,Washington State Riesling,Riesling,White
+97,Spanish Sauvignon Blanc,Sauvignon Blanc,White
+98,Central Italy Red,Sangiovese,Red
+99,Central Italy Red,Montepulciano,Red
+100,Tuscan Red,Cabernet Sauvignon,Red
+101,Tuscan Red,Merlot,Red
+102,Tuscan Red,Sangiovese,Red
+103,Tuscan Red,Canaiolo Nero,Red
+104,Southern Italy Red,Primitivo,Red
+105,Southern Italy Red,Aglianico,Red
+106,Southern Italy Red,Negroamaro,Red
+107,Southern Italy Red,Nero d'Avola,Red
+108,Spanish Rioja Red,Tempranillo,Red
+109,Spanish Rioja Red,Graciano,Red
+110,Spanish Rioja Red,Garnacha,Red
+111,Chilean Cabernet Sauvignon,Cabernet Sauvignon,Red
+112,Southern Italy Primitivo,Primitivo,Red
+113,Argentinian Malbec,Malbec,Red
+114,Napa Valley Bordeaux Blend,Cabernet Sauvignon,Red
+115,Napa Valley Bordeaux Blend,Cabernet Franc,Red
+116,Napa Valley Bordeaux Blend,Malbec,Red
+117,Napa Valley Bordeaux Blend,Merlot,Red
+118,Napa Valley Bordeaux Blend,Petit Verdot,Red
+119,Southern Rhône Red,Shiraz/Syrah,Red
+120,Southern Rhône Red,Grenache,Red
+121,Southern Rhône Red,Mourvedre,Red
+122,Californian Cabernet Sauvignon,Cabernet Sauvignon,Red
+123,Napa Valley Cabernet Sauvignon,Cabernet Sauvignon,Red
+124,Italian Amarone,Corvina,Red
+125,Italian Amarone,Rondinella,Red
+126,Italian Amarone,Corvinone,Red
+127,Italian Ripasso,Corvina,Red
+128,Italian Ripasso,Rondinella,Red
+129,Italian Ripasso,Corvinone,Red
+130,Argentinian Cabernet Sauvignon - Malbec,Cabernet Sauvignon,Red
+131,Argentinian Cabernet Sauvignon - Malbec,Malbec,Red
+132,Bordeaux Red,Cabernet Sauvignon,Red
+133,Bordeaux Red,Cabernet Franc,Red
+134,Bordeaux Red,Malbec,Red
+135,Bordeaux Red,Merlot,Red
+136,Bordeaux Red,Petit Verdot,Red
+137,Bordeaux Red,Carménère,Red
+138,Californian Zinfandel,Zinfandel,Red
+139,Washington State Cabernet Sauvignon,Cabernet Sauvignon,Red
+140,Italian Bolgheri,Cabernet Sauvignon,Red
+141,Italian Bolgheri,Merlot,Red
+142,Italian Bolgheri,Sangiovese,Red
+143,Spanish Ribera Del Duero Red,Tempranillo,Red
+144,Italian Chianti,Sangiovese,Red
+145,Italian Chianti,Trebbiano,Red
+146,Italian Chianti,Canaiolo Nero,Red
+147,Italian Chianti,Malvasia Nera,Red
+148,Italian Montepulciano d'Abruzzo,Montepulciano,Red
+149,Italian Brunello,Sangiovese,Red
+150,Chilean Carménère,Carménère,Red
+151,Spanish Red,Grenache,Red
+152,Spanish Red,Tempranillo,Red
+153,Spanish Grenache,Grenache,Red
+154,Spanish Monastrell,Mourvedre,Red
+155,Portuguese Alentejo Red,Aragonez,Red
+156,Portuguese Alentejo Red,Castelao,Red
+157,Portuguese Alentejo Red,Trincadeira,Red
+158,Northern Italy Red,Nebbiolo,Red
+159,Northern Italy Red,Barbera,Red
+160,Northern Italy Red,Dolcetto,Red
+161,Argentinian Cabernet Sauvignon,Cabernet Sauvignon,Red
+162,Australian Shiraz,Shiraz/Syrah,Red
+163,Californian Red Blend,Shiraz/Syrah,Red
+164,Californian Red Blend,Cabernet Sauvignon,Red
+165,Californian Red Blend,Merlot,Red
+166,Californian Red Blend,Zinfandel,Red
+167,Southern Rhône Châteauneuf-du-Pape Red,Shiraz/Syrah,Red
+168,Southern Rhône Châteauneuf-du-Pape Red,Mourvedre,Red
+169,Southern Rhône Châteauneuf-du-Pape Red,Counoise,Red
+170,Southern Rhône Châteauneuf-du-Pape Red,Cinsaut,Red
+171,Southern Rhône Châteauneuf-du-Pape Red,Vaccareze,Red
+172,Southern Rhône Châteauneuf-du-Pape Red,Muscardin,Red
+173,Australian Cabernet - Shiraz,Shiraz/Syrah,Red
+174,Australian Cabernet - Shiraz,Cabernet Sauvignon,Red
+175,Bordeaux Pauillac,Cabernet Sauvignon,Red
+176,Bordeaux Pauillac,Cabernet Franc,Red
+177,Bordeaux Pauillac,Malbec,Red
+178,Bordeaux Pauillac,Merlot,Red
+179,Bordeaux Pauillac,Petit Verdot,Red
+180,Bordeaux Pauillac,Carménère,Red
+181,Chilean Pinot Noir,Pinot Noir,Red
+182,Chilean Bordeaux Blend,Cabernet Sauvignon,Red
+183,Chilean Bordeaux Blend,Cabernet Franc,Red
+184,Chilean Bordeaux Blend,Malbec,Red
+185,Chilean Bordeaux Blend,Merlot,Red
+186,Chilean Bordeaux Blend,Petit Verdot,Red
+187,Chilean Bordeaux Blend,Carménère,Red
+188,Italian Vino Nobile Di Montepulciano,Sangiovese,Red
+189,Italian Vino Nobile Di Montepulciano,Canaiolo Nero,Red
+190,Spanish Priorat Red,Shiraz/Syrah,Red
+191,Spanish Priorat Red,Cabernet Sauvignon,Red
+192,Spanish Priorat Red,Grenache,Red
+193,Spanish Priorat Red,Carignan,Red
+194,Californian Merlot,Merlot,Red
+195,Italian Valpolicella Red,Corvina,Red
+196,Italian Valpolicella Red,Rondinella,Red
+197,Italian Valpolicella Red,Corvinone,Red
+198,Italian Barbaresco,Nebbiolo,Red
+199,Spanish Toro Red,Tempranillo,Red
+200,Italian Barolo,Nebbiolo,Red
+201,Spanish Cabernet Sauvignon,Cabernet Sauvignon,Red
+202,Argentinian Bordeaux Blend,Cabernet Sauvignon,Red
+203,Argentinian Bordeaux Blend,Cabernet Franc,Red
+204,Argentinian Bordeaux Blend,Malbec,Red
+205,Argentinian Bordeaux Blend,Merlot,Red
+206,Argentinian Bordeaux Blend,Petit Verdot,Red
+207,Argentinian Bordeaux Blend,Carménère,Red
+208,Bordeaux Saint-Julien,Cabernet Sauvignon,Red
+209,Bordeaux Saint-Julien,Cabernet Franc,Red
+210,Bordeaux Saint-Julien,Malbec,Red
+211,Bordeaux Saint-Julien,Merlot,Red
+212,Bordeaux Saint-Julien,Petit Verdot,Red
+213,Bordeaux Saint-Julien,Carménère,Red
+214,Beaujolais Red,Gamay,Red
+215,Californian Pinot Noir,Pinot Noir,Red
+216,Bordeaux Margaux,Cabernet Sauvignon,Red
+217,Bordeaux Margaux,Cabernet Franc,Red
+218,Bordeaux Margaux,Malbec,Red
+219,Bordeaux Margaux,Merlot,Red
+220,Bordeaux Margaux,Petit Verdot,Red
+221,Bordeaux Margaux,Carménère,Red
+222,Washington State Merlot,Merlot,Red

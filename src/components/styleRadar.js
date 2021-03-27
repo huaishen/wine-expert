@@ -6,7 +6,7 @@
 /////////////////////////////////////////////////////////
 import * as d3 from 'd3';
 
-export function RadarChart(id, data, options) {
+export function styleRadar(id, data, options) {
 	var cfg = {
 	 w: 600,				//Width of the circle
 	 h: 600,				//Height of the circle

@@ -70,7 +70,7 @@ export default class BarChart extends Component {
                 .selectAll("rect")
                 .data(data)
                 .join("rect")
-                .attr("fill", "red")
+                .attr("fill", "#ddabae")
                 .attr("x", (d, i) => x(i))
                 .attr("y", d => y(d.count))
                 .attr("height", d => y(0) - y(d.count))

@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {select} from 'd3-selection'
 import '../css/pieChart.css'
 import * as d3 from 'd3';
-import d3Tip from "d3-tip";
 import {colorScale} from '../utils/constant'
 
 export default class PieChart extends Component {
@@ -10,7 +9,7 @@ export default class PieChart extends Component {
         super(props)
         this.state = {
             outerRadius: 100,
-            innerRadius: 10
+            innerRadius: 40
         }
 
         this.createPieChart = this.createPieChart.bind(this)
