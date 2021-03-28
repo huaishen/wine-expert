@@ -1,0 +1,17 @@
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 10px;
+    padding: 2px;
+    font: 5px sans-serif;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}

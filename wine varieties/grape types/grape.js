@@ -1,9 +1,4 @@
-const svg = d3.select('#svg');
-const width = +svg.attr('width');
-const height = +svg.attr('height');
 
-outerRadius = Math.min(width, height) * 0.4;
-innerRadius = outerRadius - 150;
 
 d3.csv('wine_name_grapes.csv').then((data) =>{
     const indexByName = new Map;
@@ -29,7 +24,7 @@ d3.csv('wine_name_grapes.csv').then((data) =>{
           indexByName.set(d, n++);
         }
       });
-    
+
     // let n_obj = 0;
     data.forEach(d => {
         if (!indexByName.has(d = d.grapes)) {
@@ -103,13 +98,13 @@ d3.csv('wine_name_grapes.csv').then((data) =>{
     .on("mouseout", d => onMouseOut(d));
 
     function onMouseOver(selected) {
-        
+
         target_index = []
         for(i=0;i<matrix[selected.index].length;i++){
             if(matrix[selected.index][i] == 1)
                 target_index.push(i)
         }
-        group      
+        group
           .filter(function(d){
               flag = true
               for(i in target_index){
@@ -119,12 +114,12 @@ d3.csv('wine_name_grapes.csv').then((data) =>{
               return d.index !== selected.index && flag
           })
           .style("opacity", 0.2);
-        
+
         g.selectAll(".chord")
           .filter( d => (d.source.index !== selected.index && d.target.index !== selected.index))
           .style("opacity", 0.1);
       }
-      
+
       function onMouseOut() {
         group.style("opacity", 1);
         g.selectAll(".chord")
@@ -156,7 +151,7 @@ d3.csv('wine_name_grapes.csv').then((data) =>{
                 return "translate(0," + i * 20 + ")"
             }
         })
-    
+
     legend.append('rect')
         .attr("x", 0)
         .attr("y", 0)
@@ -165,7 +160,7 @@ d3.csv('wine_name_grapes.csv').then((data) =>{
         .style("fill", function (d, i) {
         return color(i)
     })
-    
+
     legend.append('text')
         .attr("x", 20)
         .attr("y", 5)
@@ -177,5 +172,5 @@ d3.csv('wine_name_grapes.csv').then((data) =>{
     .style("text-anchor", "start")
     .style("font-size", 10)
 
-    
+
 });

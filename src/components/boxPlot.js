@@ -4,6 +4,7 @@ import '../css/pieChart.css'
 import * as d3 from 'd3';
 import {colorScale} from '../utils/constant'
 import {nest} from 'd3-collection'
+import _, { map } from 'underscore'
 
 export default class BoxPlot extends Component {
     constructor(props) {
@@ -61,7 +62,7 @@ export default class BoxPlot extends Component {
                 .paddingOuter(.5)
 
             const y = d3.scaleLinear()
-                .domain([d3.min(rawData, d => d.price), Math.min(d3.max(rawData, d => d.price), 500)]).nice()
+                .domain([d3.min(rawData, d => d.price), Math.min(d3.max(rawData, d => d.price), 300)]).nice()
                 .range([height - margin.bottom, margin.top])
 
             const xAxis = g => g
@@ -99,16 +100,19 @@ export default class BoxPlot extends Component {
             groups
                 .selectAll("points")
                 .data(d => {
+                    return (d.value.filter(v => v.price < 300 || !('price' in v)).slice(0, 200))
+                    console.log(_.sampleSize([1,2,3,4,5], 3))
                     if (d.value.length > 200) {
                         return d.value.slice(0, 200);
                     } else return d.value;
+                    // _.sample(d.value.filter(v => v.price < 300), 200)
                 })
                 .join("circle")
                 .attr("cx", d => 0 - jitterWidth / 2 + Math.random() * jitterWidth)
                 .attr("cy", d => y(d.price))
                 .attr("r", 2)
                 .style("fill", d => colorScale[d.type_name])
-                .attr("fill-opacity", 0.8);
+                .attr("fill-opacity", 0.9);
 
             groups
                 .selectAll("box")
@@ -120,8 +124,8 @@ export default class BoxPlot extends Component {
                 .attr("height", d => y(d.value.quartiles[0]) - y(d.value.quartiles[2]))
                 .attr("width", boxWidth)
                 .attr("stroke", "#808080")
-                .style("fill", "rgb(255, 255, 255)")
-                .style("fill-opacity", 0.7);
+                .style("fill", d=>colorScale[d.key])
+                .style("fill-opacity", 0.6);
 
             groups
                 .selectAll("horizontalLine")

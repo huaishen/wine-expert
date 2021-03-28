@@ -1,0 +1,9 @@
+.centerContainer {
+    text-align: center;
+    display: block;
+    margin: auto
+}
+
+h1 {
+    color: #722f37;
+}
