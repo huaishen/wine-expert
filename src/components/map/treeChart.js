@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {select} from 'd3-selection'
 import * as d3 from 'd3';
 import { colorScale } from '../utils/constant'
-import '../css/treeChart.css'
+import '../../css/treeChart.css'
 
 export default class TreeChart extends Component {
     constructor(props) {

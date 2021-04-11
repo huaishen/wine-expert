@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {select} from 'd3-selection'
-import '../css/pieChart.css'
+import '../../css/pieChart.css'
 import * as d3 from 'd3';
 import {colorScale} from '../utils/constant'
 import {nest} from 'd3-collection'

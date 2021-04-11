@@ -49,6 +49,7 @@ export default function ListRouter() {
                     <ListItemLink to="/map" primary="Wine Map" icon={<i className="iconfont icon-map"/>}/>
                     <ListItemLink to="/radar" primary="Taste Radar" icon={<i className="iconfont icon-radar"/>}/>
                     <ListItemLink to="/tree" primary="Grape-Style Chord" icon={<i className="iconfont icon-tp_radial"/>}/>
+                    <ListItemLink to="/network" primary="Food Pair Network" icon={<i className="iconfont icon-network1"/>}/>
                 </List>
             </Paper>
         </div>

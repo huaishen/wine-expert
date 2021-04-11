@@ -40,7 +40,7 @@ var stratify = d3.stratify()
 
 var tree = d3.tree()
     .size([360, 350])
-    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
+    .separation(function(a, b) { return (a.parent === b.parent ? 1 : 2) / a.depth; });
 
 d3.csv("wine_style.csv", function(error, data) {
   if (error) throw error;

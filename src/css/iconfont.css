@@ -1,4 +1,4 @@
-@import url('https://at.alicdn.com/t/font_2417766_zux7fcy0zir.css');
+@import url('https://at.alicdn.com/t/font_2417766_wb4weagmcya.css');
 
 .iconfont {
    font-size: 22px
@@ -13,5 +13,9 @@
 }
 
 .icon-tp_radial {
+    margin-left: 5px;
+}
+
+.icon-network1 {
     margin-left: 5px;
 }

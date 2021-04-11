@@ -138,7 +138,7 @@ class FullScreenDialog extends React.Component {
                                 <PieChart data={this.state.useData.type_count} width='300' height='250'/>
                             </Grid>
                             <Grid item xs>
-                                <h1 className={classes.graphHeader}>Grape Type</h1>
+                                <h1 className={classes.graphHeader}>Top 5 Popular Grape Type</h1>
                                 <BarChart data={this.state.useData.grape_count} width='400' height='220'/>
                             </Grid>
                         </Grid>

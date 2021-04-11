@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {select} from 'd3-selection'
-import '../css/pieChart.css'
+import '../../css/pieChart.css'
 import * as d3 from 'd3';
 import {colorScale} from '../utils/constant'
 
@@ -32,7 +32,6 @@ export default class PieChart extends Component {
         const node = this.node;
         const data = this.props.data;
         const width = self.props.width;
-        const height = self.props.height;
 
         if (data) {
             let colorData = [];
@@ -43,7 +42,12 @@ export default class PieChart extends Component {
                 });
             }
 
-            select(node).selectAll('*').remove()
+            select(node).selectAll('*').transition();
+
+            const tooltip = d3.select('div.FullScreenDialog-root-17')
+                .append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
 
             const arcGenerator = d3
                 .arc()
@@ -68,12 +72,36 @@ export default class PieChart extends Component {
                 .data(pieGenerator(data))
                 .enter();
 
-            const slices = arc.append('path')
+            const mouseOverEvent = d => {
+                const data = d.target.__data__.data;
+                tooltip.transition()
+                    .duration(100)
+                    .style("opacity", .8);
+                tooltip.html("<p>Name: " + data.name + "</p> <p> Wine Count: " + data.value  + "</p>")
+                    .style("left", () => d.pageX + 'px')
+                    .style("top", () => d.pageY + 'px');
+            };
+
+            const mouseOutEvent = () => {
+                tooltip.transition()
+                    .duration(100)
+                    .style("opacity", 0);
+            };
+
+            const mouseMoveEvent = d => {
+                tooltip.style("left", (d.pageX) + "px")
+                    .style("top", (d.pageY) + "px");
+            };
+
+            arc.append('path')
                 .attr('d', arcGenerator)
                 .style('fill', (i, _) => colorScale[i.data.name])
                 .style('stroke', '#474747')
                 .style('stroke-width', 1)
                 .style('stroke-opacity', 0.6)
+                .on('mouseover.tooltip', mouseOverEvent)
+                .on("mouseout.tooltip", mouseOutEvent)
+                .on("mousemove", mouseMoveEvent);
 
 
             const legend = l.selectAll('.chart-legend')
@@ -99,18 +127,6 @@ export default class PieChart extends Component {
                 .text(d => d.name)
             ;
         }
-
-
-        // arc.append('text')
-        //     .attr('text-anchor', 'middle')
-        //     .attr('alignment-baseline', 'middle')
-        //     .text((d) => d.data.name)
-        //     .attr('font-size', 15)
-        //     .style('fill', '#ffffff')
-        //     .attr('transform', (d) => {
-        //         const [x, y] = arcGenerator.centroid(d);
-        //         return `translate(${x}, ${y})`;
-        //     });
 
     }
 

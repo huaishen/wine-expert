@@ -117,27 +117,31 @@ export function bakeThePie(options) {
         pieClass = options.pieClass?options.pieClass:'marker-cluster-pie', //Class for the whole pie
         pieLabel = options.pieLabel?options.pieLabel:d3.sum(data,valueFunc), //Label for the whole pie
         pieLabelClass = options.pieLabelClass?options.pieLabelClass:'marker-cluster-pie-label',//Class for the pie label
-
         origo = (r+strokeWidth), //Center coordinate
         w = origo*2, //width and height of the svg element
-        h = w,
-        donut = d3.pie(),
-        arc = d3.arc().innerRadius(rInner).outerRadius(r);
+        h = w
+        // donut = d3.pie(),
+        // arc = d3.arc().innerRadius(rInner).outerRadius(r);
 
-    var pieMap = {};
-    for (const [key, value] of data.entries()) {
-        const type_count = value[0].feature.properties.type_count;
-        type_count.forEach(d => {
-            const name = d.name;
-            if (name in pieMap) pieMap[name]['value'] += d.value;
-            else pieMap[name] = {"name": name, "value": d.value};
-        })
-    }
     var pieData = [];
-    for (const v in pieMap) {
-        pieData.push(pieMap[v]);
+    if (options.group !== 0) {
+        var pieMap = {};
+        for (const [key, value] of data.entries()) {
+            const type_count = value[0].feature.properties.type_count;
+            type_count.forEach(d => {
+                const name = d.name;
+                if (name in pieMap) pieMap[name]['value'] += d.value;
+                else pieMap[name] = {"name": name, "value": d.value};
+            })
+        }
+        for (const v in pieMap) {
+            pieData.push(pieMap[v]);
+        }
     }
-    console.log(pieData)
+    else {
+        pieData = data.properties.type_count
+    }
+
     //Create an svg element
     var svg = document.createElementNS(d3.namespace.svg, 'svg');
     //Create the pie chart
@@ -196,6 +200,7 @@ export function bakeThePie(options) {
         .attr('text-anchor', 'middle')
         //.attr('dominant-baseline', 'central')
         /*IE doesn't seem to support dominant-baseline, but setting dy to .3em does the trick*/
+        .attr('font-weight', 300 + 500 * Math.min(Math.max(0, pieLabel / 4000), 1))
         .attr('dy','.3em')
         .text(pieLabel);
     //Return the svg-markup rather than the actual element

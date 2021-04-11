@@ -2,10 +2,6 @@ import L from "leaflet";
 import chroma from 'chroma-js'
 import React from "react";
 
-
-
-    // ['#fee2ed', '#920036', '#860535', '#7e0d37', '#751639', '#64273e', '#590829', '#480027', '#380024']
-
 export const countMap = [100, 500, 1000, 3000, 5000, 10000, 20000, 30000, 40000];
 export const colorMap = chroma.scale(['#f5e6e8', '#380024']).mode('lch').colors(countMap.length);
 

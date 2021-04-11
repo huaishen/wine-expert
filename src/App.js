@@ -15,9 +15,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { Route, MemoryRouter, Switch } from 'react-router';
 
 import Links from './components/navBar'
-import WineMap from './components/map'
-import StyleRadar from './components/radar'
-import RadialTree from './components/radialTree'
+import WineMap from './components/map/map'
+import StyleRadar from './components/radar/radar'
+import RadialTree from './components/chord/radialTree'
+import FoodNetwork from './components/network/network'
 
 const drawerWidth = 240;
 
@@ -161,6 +162,9 @@ export default function App() {
                     </Route>
                     <Route path='/tree'>
                         <RadialTree/>
+                    </Route>
+                    <Route path='/network'>
+                        <FoodNetwork/>
                     </Route>
                 </Switch>
                 </Container>

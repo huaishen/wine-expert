@@ -3,8 +3,8 @@ import * as d3 from 'd3';
 import { styleRadar } from "./styleRadar"
 import { CompareRadar } from './comparisonRadar'
 import Grid from "@material-ui/core/Grid";
-import dataset from '../data/vivino_wines.csv'
-import '../css/radar.css'
+import dataset from '../../data/vivino_wines.csv'
+import '../../css/radar.css'
 
 var margin = {top: 100, right: 100, bottom: 100, left: 100},
     width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
@@ -161,7 +161,7 @@ export default class StyleRadar extends React.Component {
             <div id="radarContainer">
                 <Grid container spacing={3}>
                     <Grid className="centerContainer" item xs>
-                        <h1>Comparison Radar</h1>
+                        <h1>Wine Comparison Radar</h1>
                         <div>
                             <button id='addEntry'>Add Entry</button>
                             <button id='removeEntry'>Remove Entry</button>
@@ -170,12 +170,12 @@ export default class StyleRadar extends React.Component {
                     </Grid>
 
                     <Grid className="centerContainer" item xs>
-                        <h1>Style Type Radar</h1>
+                        <h1>Wine Variety Radar</h1>
                         <div>
                             <select id='select'></select>
                             <p id='count'></p>
                         </div>
-                        <div className="radarChart"></div>
+                        <div className="radarChart"/>
                     </Grid>
                 </Grid>
 

@@ -157,7 +157,7 @@ export default function drawGrapeChart(csvpath){
 
 
         var svgLegned = svg.append("g")
-            .attr("transform", "translate(1050,500)");
+            .attr("transform", "translate(1200,500)");
 
         var keys = [];
         for (const key in colorScale) {

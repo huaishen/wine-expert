@@ -10,7 +10,7 @@ export default class BarChart extends Component {
             outerRadius: 100,
             innerRadius: 10,
             margin : {
-                top: 10, right: 20, bottom: 20, left: 40,
+                top: 15, right: 20, bottom: 20, left: 40,
             }
         }
 
@@ -84,6 +84,13 @@ export default class BarChart extends Component {
 
             g.append("g")
                 .call(yAxis);
+
+            g.append("text")
+                .attr("text-anchor", "start")
+                .attr('font-size', '10px')
+                .attr("x", 0)
+                .attr("y", margin.top - 4)
+                .text("Number of Wines")
         }
 
 
