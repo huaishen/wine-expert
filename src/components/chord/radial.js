@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 import '../../css/tree.css'
-import { CompareRadar } from '../radar/comparisonRadar.js'
+import { CompareRadar } from './comparisonRadar.js'
 
 export default function drawRadialChart(id, csvpath, radar_csv, text){
     d3.csv(csvpath).then((Treedata) => {

@@ -1,0 +1,54 @@
+#radarContainer {
+  /* Style the tab content */
+}
+#radarContainer div {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  fill: #242424;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  cursor: default;
+}
+#radarContainer .legend {
+  font-family: 'Raleway', sans-serif;
+  fill: #333333;
+}
+#radarContainer .tooltip {
+  fill: #333333;
+}
+#radarContainer .tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+#radarContainer .tablink:hover {
+  background-color: #777;
+}
+#radarContainer .tabcontent {
+  /* color: black; */
+  display: none;
+  /* padding: 50px;
+    text-align: center; */
+}
+#radarContainer .grid-container {
+  display: grid;
+  grid-row-gap: 50px;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+}
+#radarContainer .grid-item {
+  padding: 20px;
+}
+#radarContainer .labelText {
+  fill: #6B6B6B;
+  font-size: 13px;
+  font-family: 'Courgette', sans-serif;
+}
+/*# sourceMappingURL=radarChart.css.map */
