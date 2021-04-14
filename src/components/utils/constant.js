@@ -1,5 +1,5 @@
 export const colorScale = {
-    'Red': 'rgba(177,18,38,0.73)', 'White': '#d4af37', 'Sparkling': '#7086ed',
+    'Red': 'rgba(177,18,38,0.73)', 'White': 'rgba(214,174,78,0.89)', 'Sparkling': '#848edb',
     'Rose': '#ffb6c1', 'Dessert': '#edec7f', 'Fortified': '#722f37'
 };
 
