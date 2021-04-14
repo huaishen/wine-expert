@@ -9,14 +9,14 @@ import { makeStyles } from "@material-ui/styles";
 import '../../css/radialTree.css'
 import drawGrapeChart from './grape'
 import drawRadialChart from './radial'
-import {colorScale} from '../../utils/constant'
+import {colorScale} from '../utils/constant'
 import styleRadar from './radar_style'
 
 var margin = {top: 50, right: 50, bottom: 50, left: 50},
     width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right,
     height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
-console.log(width, height)
+
 var labels = ['rating', 'price', 'sweetness', 'intensity', 'tannin', 'acidity']
 var color = d3.scaleOrdinal().range(['#6a111c'])
 
@@ -44,7 +44,7 @@ export default class RadialTree extends React.Component {
         function drawGrapeChart(id, csvpath){
             d3.csv(csvpath).then((data) => {
                 d3.csv(dataset_radar).then((dataset) => {
-        
+
                 // const svg = d3.select('#svg');
                 // const width = +svg.attr('width');
                 // const height = +svg.attr('height');
@@ -53,16 +53,16 @@ export default class RadialTree extends React.Component {
                 const svg = d3.select(id).append("svg")
                             .attr('width', width)
                             .attr("height", height)
-        
+
                 const outerRadius = width * 0.45;
                 const innerRadius = outerRadius - 150;
-        
+
                 const indexByName = new Map;
                 const nameByIndex = new Map;
                 const matrix = [];
                 const colores = new Map;
                 let n = 0;
-        
+
                 data.forEach(d => {
                     const type = d.type
                     if (!indexByName.has(d = d.name)) {
@@ -71,9 +71,9 @@ export default class RadialTree extends React.Component {
                         indexByName.set(d, n++);
                     }
                 });
-        
+
                 const data_size = n;
-        
+
                 data.forEach(d => {
                     if (!indexByName.has(d = d.grapes)) {
                         colores.set(n, d3.rgb(121, 121, 121));
@@ -81,55 +81,55 @@ export default class RadialTree extends React.Component {
                         indexByName.set(d, n++);
                     }
                 });
-        
+
                 data.forEach(d => {
                     const source = indexByName.get(d.name)
                     let row = matrix[source];
                     if (!row) row = matrix[source] = Array.from({length: n}).fill(0);
                     row[indexByName.get(d.grapes)]++;
-        
+
                 });
-        
+
                 data.forEach(d => {
                     const source = indexByName.get(d.grapes)
                     let row = matrix[source];
                     if (!row) row = matrix[source] = Array.from({length: n}).fill(0);
                     row[indexByName.get(d.name)]++;
-        
+
                 });
-        
-        
+
+
                 const chord = d3.chord()
                     .padAngle(.04)
                     .sortSubgroups(d3.descending)
                     .sortChords(d3.descending)
-        
+
                 const arc = d3.arc()
                     .innerRadius(innerRadius)
                     .outerRadius(innerRadius + 20)
-        
+
                 const ribbon = d3.ribbon()
                     .radius(innerRadius)
-        
+
                 const chords = chord(matrix);
-        
-        
+
+
                 const g = svg.append("g")
                     .attr("transform", "translate(" + (width -50)/ 2 + "," + (height-100) / 2 + ")")
                     .datum(chord(matrix));
-        
+
                 const group = g.append("g")
                     .selectAll("g")
                     .data(chords.groups)
                     .join("g");
-        
+
                 group.append("path")
                     .attr("fill", d => d3.rgb(colores.get(d.index)).darker())
                     .attr("stroke", d => d3.rgb(colores.get(d.index)).darker())
                     .attr("d", arc)
                 // .on("mouseover", onMouseOver)
                 // .on("mouseout", onMouseOut);
-        
+
                 group.append("text")
                     .each(d => { d.angle = (d.startAngle + d.endAngle) / 2; })
                     .attr("dy", ".35em")
@@ -149,8 +149,8 @@ export default class RadialTree extends React.Component {
                     .text(d => {if(d.index>=data_size) return nameByIndex.get(d.index)})
                     .on("mouseover", (event, d) => onMouseOver(d))
                     .on("mouseout", (event, d) => onMouseOut(d));
-        
-        
+
+
                 function onMouseOver(selected) {
                     // console.log(nameByIndex.get(selected.index))
                     key_filter(nameByIndex.get(selected.index))
@@ -175,18 +175,18 @@ export default class RadialTree extends React.Component {
                             return d.index !== selected.index && flag
                         })
                         .style("opacity", 0.2);
-        
+
                     g.selectAll(".chord")
                         .filter(d => (d.source.index !== selected.index && d.target.index !== selected.index))
                         .style("opacity", 0.1);
                 }
-        
+
                 function onMouseOut() {
                     group.style("opacity", 1);
                     g.selectAll(".chord")
                         .style("opacity", 1);
                 }
-        
+
                 g.append("g")
                     .attr("fill-opacity", 0.85)
                     .selectAll("path")
@@ -199,16 +199,16 @@ export default class RadialTree extends React.Component {
                     // .on("mouseover", (event, d) => onMouseOver(d))
                     .on("mouseover", (event, d) => onMouseOver(d.source))
                     .on("mouseout", (event, d) => onMouseOut(d.source));
-        
-        
+
+
                 var svgLegned = svg.append("g")
                     .attr("transform", "translate(800,550)");
-        
+
                 var keys = [];
                 for (const key in colorScale) {
                     keys.push(key);
                 }
-        
+
                 var legend = svgLegned.selectAll('g')
                     .data(keys)
                     .enter().append('g')
@@ -218,7 +218,7 @@ export default class RadialTree extends React.Component {
                             return "translate(0," + i * 20 + ")"
                         }
                     })
-        
+
                 legend.append('rect')
                     .attr("x", 0)
                     .attr("y", 0)
@@ -227,7 +227,7 @@ export default class RadialTree extends React.Component {
                     .style("fill", function (d, i) {
                         return colorScale[d]
                     })
-        
+
                 legend.append('text')
                     .attr("x", 20)
                     .attr("y", 5)
@@ -238,10 +238,10 @@ export default class RadialTree extends React.Component {
                     .attr("class", "textselected")
                     .style("text-anchor", "start")
                     .style("font-size", 10)
-        
-        
-            
-        
+
+
+
+
         // d3.csv(dataset_radar)
         // .then((dataset) => {
             let count = key => dataset.filter(d => d.style_varietal_name === key).length
@@ -317,8 +317,8 @@ export default class RadialTree extends React.Component {
         }
     }
 
-    
-    render() {     
+
+    render() {
         return (
             <div id="radialContainer">
                 <Grid spacing={0} container>
@@ -337,7 +337,7 @@ export default class RadialTree extends React.Component {
                         <Grid item>
                             <div className="radarChart"></div>
                         </Grid>
-                        </Grid>   
+                        </Grid>
                     </Grid>
                     {/* <Grid xs={3} item>
                         <Grid
@@ -348,8 +348,8 @@ export default class RadialTree extends React.Component {
                         <Grid item>
                             <h1>Intro of this wine style</h1>
                             <p> Text</p>
-                        </Grid>  
-                    </Grid> 
+                        </Grid>
+                    </Grid>
                     </Grid> */}
                     </Grid>
         </div>

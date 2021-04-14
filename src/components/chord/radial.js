@@ -1,7 +1,6 @@
 import * as d3 from 'd3'
 import '../../css/tree.css'
-import { CompareRadar } from './comparisonRadar'
-// import {colorScale} from '../utils/constant'
+import { CompareRadar } from '../radar/comparisonRadar.js'
 
 export default function drawRadialChart(id, csvpath, radar_csv, text){
     d3.csv(csvpath).then((Treedata) => {
@@ -18,33 +17,33 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
     var ZOOM_INC = 0.04;  // zoom factor per animation frame
     var PAN_INC = 3;  //  pan per animation frame
     var ROT_INC = 0.3;  // rotation per animation frame
-  
+
     var counter = 0;  // node ids
     var curNode;  // currently selected node
     var curPath;  // array of nodes in the path to the currently selected node
-    var flag = 0;      
+    var flag = 0;
     // size of the diagram
     var width = 500;
     var height = 500;
-  
+
     // current pan, zoom, and rotation
     var curX = width / 2;
     var curY = height / 2;
     var curZ = 1.0; // current zoom
     var curR = 270; // current rotation
-  
+
 // d3 diagonal projection for use by the node paths
     // var diagonal= d3.svg.diagonal.radial()
     //   .projection(function(d) {
     //       return [d.y, d.x / 180 * Math.PI];
     //   });
-  
+
     function project(x, y) {
       // return [y, x / 180 * Math.PI];
       var angle = (x - 90) / 180 * Math.PI, radius = y;
       return [radius * Math.cos(angle), radius * Math.sin(angle)];
     }
-  
+
     // d3 tree layout
     var tree = d3.tree()
       // .nodeSize([4.5, 120])
@@ -52,32 +51,32 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
       .separation(function(a, b) {
         return a.depth === 0 ? 1 : (a.parent === b.parent ? 1 : 2) / a.depth;
     });
-  
+
     // define the svgBase, attaching a class for styling and the zoomListener
     d3.select(id).select("svg").remove();
     var svgBase = d3.select('.drawRadialChart').append('svg')
       .attr('width', width)
       .attr('height', height)
       // .on('mousedown', mousedown);
-  
+
     // Group which holds all nodes and manages pan, zoom, rotate
     var svgGroup = svgBase.append('g')
       .attr('transform', 'translate(' + curX + ',' + curY + ')');
-  
+
     d3.select('#selection').on('mousedown', switchroot);
 
     // Define the data root
     var stratify = d3.stratify()
       .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf("\\")); });
-  
+
     var root = stratify(Treedata)
     // console.log(root)
-  
+
     // var root = d3.hierarchy(Treedata);
     root.x0 = curY;
     root.y0 = 0;
     selectNode(root); // current selected node
-  
+
     // Collapse all children of root's children before rendering
     // var text = "South African Syrah"
     var source = root;
@@ -112,9 +111,9 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
         // var duration = transition ?
         //   (event && event.altKey ? DURATION * 4 : DURATION) : 0;
         var duration = 2
-    
+
         // Compute the new tree layout.
-    
+
         var nodes = tree(source).descendants();
         var links = tree(source).links();
         svgGroup.transition().duration(duration)
@@ -131,7 +130,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
 
         function wrap(text, width) {
           text.each(function() {
-            
+
             var text = d3.select(this),
                 words = text.text().split(/\s+/).reverse(),
                 word,
@@ -154,7 +153,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
             }
           });
         }
-        
+
       // Enter any new nodes at the parent's previous position
       var nodeEnter = node.enter().insert('g', ':first-child')
           .attr('class', 'node')
@@ -172,7 +171,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
       nodeEnter.append('text')
         // .text(function(d) {  if(d.name.length > 10) { return wordwrap(d.name, 10, '<br>') } } )
         .text(function(d) {
-          return d.id.substring(d.id.lastIndexOf("\\") + 1); 
+          return d.id.substring(d.id.lastIndexOf("\\") + 1);
           // return d.data.name;
         })
         .style('opacity', 0.9)
@@ -237,7 +236,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
 
       nodeExit.select('circle').attr('r', 0);
       nodeExit.select('text').style('fill-opacity', 0);
-    
+
         // Update the links...
         var link = svgGroup.selectAll('path.link')
             .data(links, function(d) {
@@ -285,7 +284,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
       } // end update
 
     // Helper functions for collapsing and expanding nodes
-  
+
     // Toggle expand / collapse
     // function toggle(d) {
     //   console.log(d.children, d._children)
@@ -298,7 +297,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
     //   }
     // }
 
-  
+
     function toggleTree(d) {
       if (d.children) {
         collapseTree(d);
@@ -306,14 +305,14 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
         expandTree(d);
       }
     }
-  
+
     function expand(d) {
       if (d._children) {
         d.children = d._children;
         d._children = null;
       }
     }
-  
+
     // expand all children, whether expanded or collapsed
     function expandTree(d) {
       if (d._children) {
@@ -324,14 +323,14 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
         d.children.forEach(expandTree);
       }
     }
-  
+
     function collapse(d) {
       if (d.children) {
         d._children = d.children;
         d.children = null;
       }
     }
-  
+
   //   // collapse all children
     function collapseTree(d) {
       if (d.children) {
@@ -342,7 +341,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
         d._children.forEach(collapseTree);
       }
     }
-  
+
   //   // expand one level of tree
     function expand1Level(d) {
       var q = [d]; // non-recursive
@@ -361,7 +360,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
       }
       // no nodes to open
     }
-  
+
   //   // highlight selected node
     function selectNode(node) {
       if (curNode) {
@@ -373,7 +372,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
       // console.log("curnode", curNode)
       d3.select('#selection').html(fullpath(node));
     }
-  
+
   //   // for displaying full path of node in tree
     function fullpath(d, idx) {
       idx = idx || 0;
@@ -384,9 +383,9 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
         '" data-sel="'+ idx +'" title="Set Root to '+ d.data.name +'">' +
         d.name + '</span>';
     }
-  
+
   //   // d3 event handlers
-  
+
     function switchroot(event) {
       event.preventDefault();
       var pathelms = document.querySelectorAll('#selection .nodepath');
@@ -405,7 +404,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
       }
       update(root, true);
     }
-        
+
     // function click(event, d) { // select node
     //   console.log("click", d)
     //   if (event.defaultPrevented || d === curNode) { return; } // suppressed
@@ -414,7 +413,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
     //   update(d, true);
     // //   update(d, true);
     // }
-  
+
     function dblclick(event, d) {  // Toggle children of node
       if (event.defaultPrevented) { return; } // click suppressed
       event.preventDefault();
@@ -431,30 +430,30 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
         flag = 1;
         update(d, true);
         update(d, true);
-        
+
       }else{
         flag = 0;
         update(root, true);
         update(root, true);
-        
+
       }
-      
+
       // update(d, true);
     }
-  
+
     var startposX, startposY; // initial position on mouse button down for pan
-  
-  
+
+
     // keep rotation between 0 and 360
     function limitR(r) {
       return (r + 360) % 360;
     }
-  
+
   //   // limit size of text and nodes as scale increases
     function reduceZ() {
       return Math.pow(1.1, -curZ);
     }
-  
+
   //   // set view with no animation
     function setview() {
         svgGroup.attr('transform', 'rotate(' + curR + ' ' + curX + ' ' + curY +
@@ -474,8 +473,8 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
 
     var color2 = d3.scaleOrdinal().range(d3.schemeCategory10)
     var margin = {top: 50, right: 50, bottom: 50, left: 50},
-    width = 200
-    height = 200;
+    width = 300
+    height = 300;
     var labels = ['rating', 'price', 'sweetness', 'intensity', 'tannin', 'acidity']
 
     var radarChartOptions2 = {
@@ -522,7 +521,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
             // console.log(dataset[0]['name'])
             var target;
             for(var i in dataset){
-                if(dataset[i]['name'] == name){    
+                if(dataset[i]['name'] == name){
                     target = i;
                     break;
                 }
@@ -547,8 +546,8 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
 
             })
 
-  
+
   });
-        
+
 
 }

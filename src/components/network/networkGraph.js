@@ -57,7 +57,7 @@ export default class NetworkGraph extends Component {
         const root = this.node;
         const width = self.props.width;
         const height = self.props.height;
-        const imageRadius = 25;
+        const imageRadius = 20;
 
         select(root).selectAll('*').remove();
 
@@ -71,7 +71,7 @@ export default class NetworkGraph extends Component {
 
         const simulation = d3.forceSimulation(nodes)
             .force("link", d3.forceLink(links).id(d => d.id))
-            .force("charge", d3.forceManyBody().strength(d => d.__proto__.group === 'Wine' ? -500 : -300))
+            .force("charge", d3.forceManyBody().strength(d => d.__proto__.group === 'Wine' ? -400 : -200))
             .force("center", d3.forceCenter(width / 3, height / 2))
 
         const link = select(root).append("g")
