@@ -473,8 +473,8 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
 
     var color2 = d3.scaleOrdinal().range(d3.schemeCategory10)
     var margin = {top: 50, right: 50, bottom: 50, left: 50},
-    width = 300
-    height = 300;
+    width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right
+    height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20)
     var labels = ['rating', 'price', 'sweetness', 'intensity', 'tannin', 'acidity']
 
     var radarChartOptions2 = {
