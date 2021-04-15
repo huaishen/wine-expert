@@ -322,7 +322,7 @@ export default class RadialTree extends React.Component {
         return (
             <div id="radialContainer">
                 <Grid spacing={0} container>
-                    <Grid md={6} xs={8} item>
+                    <Grid md={8} xs={8} item>
                         <div className="drawGrapeChart"></div>
                     </Grid>
                     <Grid xs={0} item>
