@@ -12,8 +12,8 @@ import drawRadialChart from './radial'
 import {colorScale} from '../utils/constant'
 import styleRadar from './radar_style'
 
-var margin = {top: 50, right: 50, bottom: 50, left: 50},
-    width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right,
+var margin = {top: 28, right: 40, bottom: 50, left: 40},
+    width = Math.min(275, window.innerWidth - 10) - margin.left - margin.right,
     height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
 
@@ -317,12 +317,13 @@ export default class RadialTree extends React.Component {
         }
     }
 
-
     render() {
         return (
+            
             <div id="radialContainer">
                 <Grid spacing={0} container>
                     <Grid md={8} xs={8} item>
+                        <h1 align="center">Grape - Style Chord</h1>
                         <div className="drawGrapeChart"></div>
                     </Grid>
                     <Grid xs={0} item>
@@ -332,9 +333,11 @@ export default class RadialTree extends React.Component {
                         container
                         >
                         <Grid item>
+                            <h3 align="center">Top 15 wines of selected style</h3>
                             <div className="drawRadialChart"></div>
                         </Grid>
                         <Grid item>
+                            <h3 align="center">Style Radar</h3>
                             <div className="radarChart"></div>
                         </Grid>
                         </Grid>

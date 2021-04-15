@@ -23,8 +23,8 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
     var curPath;  // array of nodes in the path to the currently selected node
     var flag = 0;
     // size of the diagram
-    var width = 500;
-    var height = 500;
+    var width = 470;
+    var height = 470;
 
     // current pan, zoom, and rotation
     var curX = width / 2;
@@ -47,7 +47,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
     // d3 tree layout
     var tree = d3.tree()
       // .nodeSize([4.5, 120])
-      .size([360, Math.min(width, height) / 2 - 120])
+      .size([360, Math.min(width, height) / 2 - 130])
       .separation(function(a, b) {
         return a.depth === 0 ? 1 : (a.parent === b.parent ? 1 : 2) / a.depth;
     });
@@ -224,7 +224,7 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
 
       nodeUpdate.select('text')
         .style('fill-opacity', 1);
-      nodeUpdate.select("text").call(wrap, 90);
+      nodeUpdate.select("text").call(wrap, 100);
 
       // Transition exiting nodes to the parent's new position and remove
       var nodeExit = node.exit().transition().duration(duration)
@@ -472,9 +472,9 @@ export default function drawRadialChart(id, csvpath, radar_csv, text){
     }
 
     var color2 = d3.scaleOrdinal().range(d3.schemeCategory10)
-    var margin = {top: 50, right: 50, bottom: 50, left: 50},
-    width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right
-    height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20)
+    var margin = {top: 28, right: 40, bottom: 50, left: 40},
+    width = Math.min(275, window.innerWidth - 10) - margin.left - margin.right,
+    height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
     var labels = ['rating', 'price', 'sweetness', 'intensity', 'tannin', 'acidity']
 
     var radarChartOptions2 = {
