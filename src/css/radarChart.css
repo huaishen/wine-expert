@@ -52,5 +52,14 @@
   font-family: 'Courgette', sans-serif;
 }
 
+h2.radarTitle {
+  text-align: center;
+}
+
+p.radarDesc {
+  text-align: center;
+  font-size: 13px;
+}
+
 /* h{margin:0px;border:0;padding:0;} */
 /*# sourceMappingURL=radarChart.css.map */

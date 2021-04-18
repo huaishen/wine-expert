@@ -10,7 +10,7 @@ var type_data = {
         'Pinot Noir',
         'Syrah',
         'Malbec',
-        'Chianti',
+        'Côte de Nuits Red',
         'Merlot',],
     2: ['Chardonnay',
         'Riesling',
@@ -56,8 +56,8 @@ var radarDescMap = { 1:{
     'Malbec':
     'Known for its plump, dark fruit flavors and smoky finish that offers a great alternative to higher priced',
 
-    'Chianti':
-    'An iconic, food-friendly Italian red wine made primarily with Sangiovese grapes',
+    'Côte de Nuits Red':
+    'The sturdiest wines with most depth of flavour come from the steeper slopes',
 
     'Merlot':
     'A varietal that sits smack dab in the middle of the red wine spectrum, with easy-drinking tannins and super-soft finish',},
@@ -221,12 +221,11 @@ export default class StyleRadar extends React.Component {
                     e.toElement.style.backgroundColor = '#d62728';
 
 					items.append('h2')
-						// .attr('class', 'radarTitle')
+						.attr('class', 'radarTitle')
 						.text(d => d)
 					
 					items.append('p')
-                        .style('font-size', '13px')
-						// .attr('class', 'radarDesc')
+						.attr('class', 'radarDesc')
 						.text(d => radarDescMap[type_id][d])
                 })
 
