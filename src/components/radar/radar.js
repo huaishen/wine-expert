@@ -11,12 +11,15 @@ var type_data = {
         'Syrah',
         'Malbec',
         'Côte de Nuits Red',
+        'Shiraz',
         'Merlot',],
     2: ['Chardonnay',
         'Riesling',
         'Sauvignon Blanc',
         'Chablis',
         'Chenin Blanc',
+        'Côte de Beaune White',
+        'Macônnais White',
         'Pinot Grigio'],
     3: ['Champagne', 'Prosecco', 'Cava', 'Cremant'],
     4: ['Rosé', 'Pinot Grigio', 'Pinot Noir'],
@@ -59,6 +62,9 @@ var radarDescMap = { 1:{
     'Côte de Nuits Red':
     'The sturdiest wines with most depth of flavour come from the steeper slopes',
 
+    'Shiraz':
+    'Shiraz wines are well known for their rich and juicy mid-palate. You can expect to taste flavours of pepper, spice and sweet red fruit.',
+
     'Merlot':
     'A varietal that sits smack dab in the middle of the red wine spectrum, with easy-drinking tannins and super-soft finish',},
 
@@ -77,6 +83,12 @@ var radarDescMap = { 1:{
 
     'Chenin Blanc':
     'A very adaptable light-bodied white wine which is made in range of styles from dry to sweet',
+
+    'Côte de Beaune White':
+    'A wine that is firm without severity, flavorful and captivating, with everything that it should have: vivacity, brilliance, and intense gold colour',
+
+    'Macônnais White':
+    'Best known as a source of good value white wines made from the Chardonnay grape, with the colour of white or yellow gold or strawcoloured with gently glowing silvery or greenish highlights',
 
     'Pinot Grigio':
     'A zesty white wine that is as refreshing as a cold glass of lemonade on a hot summer\'s day, as the second most popular white wine in America',},
