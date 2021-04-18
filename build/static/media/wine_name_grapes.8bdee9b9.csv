@@ -1,0 +1,123 @@
+id,name,grapes,type
+0,Spanish Sherry,Palomino,Fortified
+1,Spanish Sherry,Moscato,Fortified
+2,Spanish Sherry,Pedro Ximenez,Fortified
+3,Portuguese Port,Touriga Nacional,Fortified
+4,Portuguese Port,Tinta Roriz,Fortified
+5,Portuguese Port,Tinta Barroca,Fortified
+6,Portuguese Port,Souzao,Fortified
+7,Portuguese Port,Touriga Francesa,Fortified
+8,Portuguese Moscatel,Moscatel de Alejandría,Fortified
+9,Spanish Pedro Ximenez,Pedro Ximenez,Fortified
+10,Portuguese Madeira,Verdelho,Fortified
+11,Portuguese Madeira,Sercial,Fortified
+12,Portuguese Madeira,Malmsey,Fortified
+13,Portuguese Madeira,Boal Branco,Fortified
+14,Portuguese Madeira,Terrantez,Fortified
+15,German Dornfelder,Dornfelder,Dessert
+16,German Riesling,Riesling,Dessert
+17,Bordeaux Sauternes,Sauvignon Blanc,Dessert
+18,Bordeaux Sauternes,Sémillon,Dessert
+19,Bordeaux Sauternes,Muscadelle,Dessert
+20,Provence Rosé,Shiraz/Syrah,Rose
+21,Provence Rosé,Grenache,Rose
+22,Provence Rosé,Cinsault,Rose
+23,Languedoc-Roussillon Rosé,Shiraz/Syrah,Rose
+24,Languedoc-Roussillon Rosé,Grenache,Rose
+25,Languedoc-Roussillon Rosé,Mourvedre,Rose
+26,Southern Rhône Rosé,Shiraz/Syrah,Rose
+27,Southern Rhône Rosé,Grenache,Rose
+28,Southern Rhône Rosé,Mourvedre,Rose
+29,French Crémant,Chardonnay,Sparkling
+30,French Crémant,Pinot Gris,Sparkling
+31,French Crémant,Pinot Noir,Sparkling
+32,French Crémant,Roussanne,Sparkling
+33,French Crémant,Pinot Blanc,Sparkling
+34,French Crémant,Auxerrois,Sparkling
+35,French Champagne,Chardonnay,Sparkling
+36,French Champagne,Pinot Noir,Sparkling
+37,French Champagne,Pinot Meunier,Sparkling
+38,German Müller Thurgau,Müller-Thurgau,Sparkling
+39,Italian Prosecco,Glera (Prosecco),Sparkling
+40,Californian Sparkling,Chardonnay,Sparkling
+41,Californian Sparkling,Pinot Noir,Sparkling
+42,Luxembourg Crémant,Gewürztraminer,Sparkling
+43,Luxembourg Crémant,Pinot Gris,Sparkling
+44,Luxembourg Crémant,Riesling,Sparkling
+45,Luxembourg Crémant,Pinot Blanc,Sparkling
+46,Luxembourg Crémant,Auxerrois,Sparkling
+47,English Sparkling,Chardonnay,Sparkling
+48,English Sparkling,Pinot Noir,Sparkling
+49,English Sparkling,Pinot Meunier,Sparkling
+50,Brazilian Sparkling,Chardonnay,Sparkling
+51,Brazilian Sparkling,Pinot Gris,Sparkling
+52,Brazilian Sparkling,Pinot Noir,Sparkling
+53,Brazilian Sparkling,Sauvignon Blanc,Sparkling
+54,Brazilian Sparkling,Pinot Meunier,Sparkling
+55,Brazilian Sparkling,Glera (Prosecco),Sparkling
+56,Brazilian Sparkling,Verdejo,Sparkling
+57,Brazilian Sparkling,Muscatel,Sparkling
+58,Burgundy Côte de Beaune White,Chardonnay,White
+59,Burgundy Côte de Beaune White,Pinot Gris,White
+60,Burgundy Côte de Beaune White,Pinot Blanc,White
+61,Burgundy Côte de Beaune White,Aligoté,White
+62,Burgundy White,Chardonnay,White
+63,South African Chenin Blanc,Chenin Blanc,White
+64,South African Chardonnay,Chardonnay,White
+65,South African Viognier,Viognier,White
+66,South African Pinot Gris,Pinot Gris,White
+67,South African Sauvignon Blanc,Sauvignon Blanc,White
+68,German Riesling,Riesling,White
+69,German Grauburgunder,Pinot Gris,White
+70,German Gewürztraminer,Gewürztraminer,White
+71,German Chardonnay,Chardonnay,White
+72,German Müller Thurgau,Müller-Thurgau,White
+73,German Pinot Blanc,Pinot Blanc,White
+74,German Silvaner,Silvaner,White
+75,German Sauvignon Blanc,Sauvignon Blanc,White
+76,Burgundy Côte de Beaune Red,Pinot Noir,Red
+77,Burgundy Red,Pinot Noir,Red
+78,South African Pinotage,Pinotage,Red
+79,South African Cabernet - Syrah,Shiraz/Syrah,Red
+80,South African Cabernet - Syrah,Cabernet Sauvignon,Red
+81,South African Pinotage Blend,Shiraz/Syrah,Red
+82,South African Pinotage Blend,Cabernet Sauvignon,Red
+83,South African Pinotage Blend,Grenache,Red
+84,South African Pinotage Blend,Pinotage,Red
+85,South African Syrah,Shiraz/Syrah,Red
+86,South African Malbec,Malbec,Red
+87,South African Cabernet Sauvignon,Cabernet Sauvignon,Red
+88,South African Cabernet Franc,Cabernet Franc,Red
+89,South African Bordeaux Blend,Cabernet Sauvignon,Red
+90,South African Bordeaux Blend,Cabernet Franc,Red
+91,South African Bordeaux Blend,Malbec,Red
+92,South African Bordeaux Blend,Merlot,Red
+93,South African Bordeaux Blend,Petit Verdot,Red
+94,South African Bordeaux Blend,Carménère,Red
+95,South African Merlot,Merlot,Red
+96,German Spätburgunder,Pinot Noir,Red
+97,German Dornfelder,Dornfelder,Red
+98,Australian Shiraz,Shiraz/Syrah,Red
+99,Australian Cabernet Sauvignon,Cabernet Sauvignon,Red
+100,Australian Rhône Blend Red,Shiraz/Syrah,Red
+101,Australian Rhône Blend Red,Grenache,Red
+102,Australian Rhône Blend Red,Mourvedre,Red
+103,Australian Cabernet - Shiraz,Shiraz/Syrah,Red
+104,Australian Cabernet - Shiraz,Cabernet Sauvignon,Red
+105,Northern Italy Red,Nebbiolo,Red
+106,Northern Italy Red,Barbera,Red
+107,Northern Italy Red,Dolcetto,Red
+108,Burgundy Côte Chalonnaise Red,Pinot Noir,Red
+109,Naoussa Red,Xinomavro,Red
+110,Amyndeon Red,Xinomavro,Red
+111,Goumenissa Red,Negoska,Red
+112,Goumenissa Red,Xinomavro,Red
+113,Greek Nemea Red,Agiorgitiko,Red
+114,New Zealand Syrah,Shiraz/Syrah,Red
+115,New Zealand Bordeaux Blend,Cabernet Sauvignon,Red
+116,New Zealand Bordeaux Blend,Cabernet Franc,Red
+117,New Zealand Bordeaux Blend,Malbec,Red
+118,New Zealand Bordeaux Blend,Merlot,Red
+119,New Zealand Bordeaux Blend,Petit Verdot,Red
+120,New Zealand Bordeaux Blend,Carménère,Red
+121,New Zealand Pinot Noir,Pinot Noir,Red

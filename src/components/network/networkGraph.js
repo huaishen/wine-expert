@@ -4,8 +4,7 @@ import {colorCategory, colorScale} from "../utils/constant";
 import {select} from 'd3-selection'
 import '../../css/networkGraph.css'
 
-const food_data = require('../../data/style_food_data');
-const food_link = require('../../data/style_food_link');
+
 
 const scale = d3.scaleOrdinal(d3.schemeCategory10);
 const color = d => scale(d.group)
@@ -52,7 +51,8 @@ export default class NetworkGraph extends Component {
 
 
     createNetwork() {
-
+        const food_link = this.props.food_link;
+        const food_data = this.props.food_data;
         const self = this;
         const root = this.node;
         const width = self.props.width;
@@ -113,6 +113,7 @@ export default class NetworkGraph extends Component {
                 select(root).selectAll('circle.node').attr('opacity', 0.9);
                 self.setState({'selected': null, 'refresh': 0});
             }
+            self.props.parentCallback(self.state.selected)
         };
 
         const mouseOverEvent = d => {

@@ -8,8 +8,8 @@ export const colorScale = {
 export const colorCategory = {
     'Meat': '#f9594f',
     'Seafood': '#3399FF',
-    'Cheese': '#FFA600',
-    'Dessert': '#f6dea7',
-    'Vegetable & Others': '#a5eec4'
+    'Cheese': '#ff9f17',
+    'Dessert': '#e2bc00',
+    'Vegetable & Others': '#4ad657'
 };
 

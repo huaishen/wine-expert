@@ -1,28 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.ff8c16f0.chunk.css",
-    "main.js": "/static/js/main.388d0e55.chunk.js",
-    "main.js.map": "/static/js/main.388d0e55.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5feea3fc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5feea3fc.js.map",
-    "static/css/2.8197416a.chunk.css": "/static/css/2.8197416a.chunk.css",
-    "static/js/2.3fc9e665.chunk.js": "/static/js/2.3fc9e665.chunk.js",
-    "static/js/2.3fc9e665.chunk.js.map": "/static/js/2.3fc9e665.chunk.js.map",
-    "static/js/3.cce331ab.chunk.js": "/static/js/3.cce331ab.chunk.js",
-    "static/js/3.cce331ab.chunk.js.map": "/static/js/3.cce331ab.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.8197416a.chunk.css.map": "/static/css/2.8197416a.chunk.css.map",
-    "static/css/main.ff8c16f0.chunk.css.map": "/static/css/main.ff8c16f0.chunk.css.map",
-    "static/js/2.3fc9e665.chunk.js.LICENSE.txt": "/static/js/2.3fc9e665.chunk.js.LICENSE.txt",
-    "static/media/Wine Bottle.00c297af.svg": "/static/media/Wine Bottle.00c297af.svg",
-    "static/media/vivino_wines.929970a3.csv": "/static/media/vivino_wines.929970a3.csv",
-    "static/media/wine_name_grapes.0be2865e.csv": "/static/media/wine_name_grapes.0be2865e.csv"
+    "main.css": "/wine-expert/static/css/main.ee750fe0.chunk.css",
+    "main.js": "/wine-expert/static/js/main.96132edc.chunk.js",
+    "main.js.map": "/wine-expert/static/js/main.96132edc.chunk.js.map",
+    "runtime-main.js": "/wine-expert/static/js/runtime-main.7bf32ef9.js",
+    "runtime-main.js.map": "/wine-expert/static/js/runtime-main.7bf32ef9.js.map",
+    "static/css/2.8197416a.chunk.css": "/wine-expert/static/css/2.8197416a.chunk.css",
+    "static/js/2.6e73d164.chunk.js": "/wine-expert/static/js/2.6e73d164.chunk.js",
+    "static/js/2.6e73d164.chunk.js.map": "/wine-expert/static/js/2.6e73d164.chunk.js.map",
+    "static/js/3.683a22ff.chunk.js": "/wine-expert/static/js/3.683a22ff.chunk.js",
+    "static/js/3.683a22ff.chunk.js.map": "/wine-expert/static/js/3.683a22ff.chunk.js.map",
+    "index.html": "/wine-expert/index.html",
+    "static/css/2.8197416a.chunk.css.map": "/wine-expert/static/css/2.8197416a.chunk.css.map",
+    "static/css/main.ee750fe0.chunk.css.map": "/wine-expert/static/css/main.ee750fe0.chunk.css.map",
+    "static/js/2.6e73d164.chunk.js.LICENSE.txt": "/wine-expert/static/js/2.6e73d164.chunk.js.LICENSE.txt",
+    "static/media/sliced.11795653.csv": "/wine-expert/static/media/sliced.11795653.csv",
+    "static/media/tree.c5672213.csv": "/wine-expert/static/media/tree.c5672213.csv",
+    "static/media/wine.70ecc137.svg": "/wine-expert/static/media/wine.70ecc137.svg",
+    "static/media/wine_name_grapes.8bdee9b9.csv": "/wine-expert/static/media/wine_name_grapes.8bdee9b9.csv",
+    "static/media/wine_radar.a149a998.csv": "/wine-expert/static/media/wine_radar.a149a998.csv"
   },
   "entrypoints": [
-    "static/js/runtime-main.5feea3fc.js",
+    "static/js/runtime-main.7bf32ef9.js",
     "static/css/2.8197416a.chunk.css",
-    "static/js/2.3fc9e665.chunk.js",
-    "static/css/main.ff8c16f0.chunk.css",
-    "static/js/main.388d0e55.chunk.js"
+    "static/js/2.6e73d164.chunk.js",
+    "static/css/main.ee750fe0.chunk.css",
+    "static/js/main.96132edc.chunk.js"
   ]
 }
