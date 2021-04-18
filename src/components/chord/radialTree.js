@@ -138,7 +138,7 @@ export default class RadialTree extends React.Component {
               translate(${innerRadius + 26})
               ${d.angle > Math.PI ? "rotate(180)" : ""}
             `)
-                    .attr("font-size", 8)
+                    .attr("font-size", 9)
                     .attr("text-anchor", d => d.angle > Math.PI ? "end" : null)
                     .text(d => {if(d.index<data_size) return nameByIndex.get(d.index)})
                     .attr("fill", "#8c559b")
@@ -319,7 +319,7 @@ export default class RadialTree extends React.Component {
 
     render() {
         return (
-            
+
             <div id="radialContainer">
                 <Grid spacing={0} container>
                     <Grid md={8} xs={8} item>

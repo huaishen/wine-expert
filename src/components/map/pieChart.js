@@ -42,7 +42,7 @@ export default class PieChart extends Component {
                 });
             }
 
-            select(node).selectAll('*').transition();
+            select(node).selectAll('*').remove();
 
             const tooltip = d3.select('div.FullScreenDialog-root-17')
                 .append("div")

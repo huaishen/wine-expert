@@ -1,7 +1,13 @@
-.wine-card {
-  min-width: 200px;
-}
 .wine-card h5 {
   color: #920036;
+  text-align: center;
+}
+.wine-card .MuiTableCell-head {
+  font-weight: bold;
+}
+.show-button {
+  position: absolute !important;
+  top: 100px;
+  right: 50px;
 }
 /*# sourceMappingURL=wineCard.css.map */
