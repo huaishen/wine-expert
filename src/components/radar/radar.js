@@ -92,20 +92,20 @@ var radarDescMap = { 1:{
     'A wine that is firm without severity, flavorful and captivating, with everything that it should have: vivacity, brilliance, and intense gold colour',
 
     'Macônnais White':
-    'Best known as a source of good value white wines made from the Chardonnay grape, with the colour of white or yellow gold or strawcoloured with gently glowing silvery or greenish highlights',
+    'Best known as a source of good value white wines made from the Chardonnay grape, with the colour of white or yellow gold or strawcoloured with gently glowing silvery',
 
     'Pinot Grigio':
     'A zesty white wine that is as refreshing as a cold glass of lemonade on a hot summer\'s day, as the second most popular white wine in America',},
 
     3: {
     'Champagne':
-    'Subtly aromatic that the effervescence may mask their delicate bouquet', 
+    'Subtly aromatic that the effervescence may mask their delicate bouquet',
 
     'Prosecco':
-    'Produced by Glera grapes using an affordable method called the “Tank Method. It’s apt for celebration parties and inaugural events', 
+    'Produced by Glera grapes using an affordable method called the “Tank Method. It’s apt for celebration parties and inaugural events',
 
     'Cava':
-    'A wine with significant levels of carbon dioxide in it that make it fizzy. It have unique flavors of lemon, quince, pear', 
+    'A wine with significant levels of carbon dioxide in it that make it fizzy. It have unique flavors of lemon, quince, pear',
 
     'Cremant':
     'A group of sparkling wines that will satisfy your desire for high quality bubbly',
@@ -113,10 +113,10 @@ var radarDescMap = { 1:{
 
     4: {
     'Rosé':
-    'Resembles the flavor profile of a light red wine, but with brighter and crisper tasting notes, with a pleasant crunchy green flavor on the finish', 
+    'Resembles the flavor profile of a light red wine, but with brighter and crisper tasting notes, with a pleasant crunchy green flavor on the finish',
 
     'Pinot Grigio':
-    'Uses the pale purple skins of the grape to stain the wine a pale copper hue. Floral and fruit aromas of violets and roses with berries and black currant', 
+    'Uses the pale purple skins of the grape to stain the wine a pale copper hue. Floral and fruit aromas of violets and roses with berries and black currant',
 
     'Pinot Noir':
     'A delicate and crisp rosé with notes of apple, strawberry, and melon',
@@ -124,10 +124,10 @@ var radarDescMap = { 1:{
 
     5: {
     'Sherry':
-    'A fortified wine, produced in Spain\'s sherry triangle, can be dry (Vinos Generosos), naturally sweet (Vinos Dulces Naturales) or sweetened through blending (Vinos Generosos de Licor)',
+    'Produced in Spain\'s sherry triangle, can be dry (Vinos Generosos), naturally sweet (Vinos Dulces Naturales) or sweetened through blending (Vinos Generosos de Licor)',
 
     'Madeira':
-    'Often served as an aperitif or dessert wine and is used in cooking, especially for making sauces. Dry Madeira makes a good aperitif and pairs nicely with creamy soups',
+    'Often served as an aperitif or dessert wine and used in cooking, especially for making sauces. Dry Madeira pairs nicely with creamy soups',
 
     'Pedro Ximenez':
     'Probably the sweetest wine in the world. Its complexity of aroma and flavor make it fresh and harmonious on the palate as a result of the natural process of drying the grapes in the sun',
@@ -239,7 +239,7 @@ export default class StyleRadar extends React.Component {
 					items.append('h2')
 						.attr('class', 'radarTitle')
 						.text(d => d)
-					
+
 					items.append('p')
 						.attr('class', 'radarDesc')
 						.text(d => radarDescMap[type_id][d])
