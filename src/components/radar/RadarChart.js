@@ -106,10 +106,10 @@ export function RadarChart(id, data, options) {
 	//Append the lines
     var axis_len = 0.1
 	axis.append("line")
-        .attr("x1", function(d, i){ return rScale(maxValue*(1-axis_len/2)) * Math.cos(angleSlice*i - Math.PI/2); })
-        .attr("y1", function(d, i){ return rScale(maxValue*(1-axis_len/2)) * Math.sin(angleSlice*i - Math.PI/2); })
-		.attr("x2", function(d, i){ return rScale(maxValue*(1+axis_len/2)) * Math.cos(angleSlice*i - Math.PI/2); })
-		.attr("y2", function(d, i){ return rScale(maxValue*(1+axis_len/2)) * Math.sin(angleSlice*i - Math.PI/2); })
+        .attr("x1", function(d, i){ return radius * Math.cos(angleSlice*i - Math.PI/2); })
+        .attr("y1", function(d, i){ return radius * Math.sin(angleSlice*i - Math.PI/2); })
+		.attr("x2", function(d, i){ return radius * Math.cos(angleSlice*i - Math.PI/2); })
+		.attr("y2", function(d, i){ return radius * Math.sin(angleSlice*i - Math.PI/2); })
 		.attr("class", "line")
 		.style("stroke", "#CDCDCD")
 		.style("stroke-width", "2px")
