@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {select} from 'd3-selection'
 import * as d3 from 'd3';
-import { colorScale } from '../utils/constant'
 import '../../css/treeChart.css'
 
 export default class TreeChart extends Component {
@@ -14,10 +13,6 @@ export default class TreeChart extends Component {
         }
 
         this.createTreeChart = this.createTreeChart.bind(this)
-        // const width = 2 * this.state.outerRadius + margin.left + margin.right;
-        // const height = 2 * this.state.outerRadius + margin.top + margin.bottom;
-
-
     }
 
     componentDidMount() {
@@ -51,7 +46,7 @@ export default class TreeChart extends Component {
 
             const root = tree(data);
 
-            const maxHeight = -root.links()[0].target.children[0].x + margin.top ;
+            const maxHeight = -root.links()[0].target.children[0].x + margin.top;
 
             const g = select(node).append('g')
                 .attr('transform', `translate(150, ${maxHeight})`);
@@ -82,8 +77,8 @@ export default class TreeChart extends Component {
                 .attr("stroke", 'black')
                 .attr("stroke-width", 1)
                 .attr("r", 3.5)
-                .attr("opacity", d => d.data.name === self.props.name? 1 : 0.4)
-                .on('click', (_, d)=> self.props.parentCallback(d.data.name, d.depth));
+                .attr("opacity", d => d.data.name === self.props.name ? 1 : 0.4)
+                .on('click', (_, d) => self.props.parentCallback(d.data.name, d.depth));
 
             g.append("g")
                 .attr("font-family", "sans-serif")

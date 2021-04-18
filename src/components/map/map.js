@@ -71,6 +71,8 @@ export default class WineMap extends React.Component {
                 mouseout: e => geojson.resetStyle(e.target),
                 click: clickFeature
             });
+            console.log(feature)
+            layer.bindTooltip("Country: " + feature.country + '<br/> Wine count: ' + (feature.properties.wine_count? feature.properties.wine_count : 0))
         }
 
         geojson = L.geoJson(countries, {
