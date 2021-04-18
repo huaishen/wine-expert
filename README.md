@@ -4,6 +4,8 @@ This repo is for the course project of NUS CS5346 S2 AY2020/21.
 
 The final outcome is available at https://huaishen.github.io/wine-expert/.
 
+Contributions by: Li Huaishen, Zhu Hongning, Yang Yutong
+
 ## Introduction
 
 Wine is no doubt an important constituent of western culture. It is common to see a long list of wines on restaurant menus or wine as a gift on celebration occasions. However, as ordinary people without prior exposure to wine knowledge, we may feel dazzled by all sorts of wine names in wine stores or restaurants and confused about different wines’ styles and tastes. 
