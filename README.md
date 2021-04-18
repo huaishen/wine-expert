@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# Wine Expert
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is for the course project of NUS CS5346 S2 AY2020/21. 
+
+The final outcome is available at https://huaishen.github.io/wine-expert/.
+
+## Introduction
+
+Wine is no doubt an important constituent of western culture. It is common to see a long list of wines on restaurant menus or wine as a gift on celebration occasions. However, as ordinary people without prior exposure to wine knowledge, we may feel dazzled by all sorts of wine names in wine stores or restaurants and confused about different wines’ styles and tastes. 
+
+We want to use data visualization techniques to reveal some interesting facts about wine and evaluate wine varieties with multiple dimensions. Geographical visualization, network visualization, radar chart, and radial tree diagram are utilized to display patterns from unique perspectives. Wine enthusiasts may also benefit from our interactive visualization feature by discovering wines suitable for their own taste preferences.
+
+## Visualization 
+
+In total, we have 4 sets of visualization - **Wine map, Taste radar, Grape-style Chord, Food pair network**. The adjustable navigation bar is on the left side of the webpage. The user can click on each row to switch the view, and the default page is Wine map. 
+
+### Wine Map
+
+#### Choropleth Map
+<img src="/docs/choropleth.png" />
+
+#### Country-specific Dashboard 
+
+<img src="/docs/country_dashboard.png" />
+
+#### Markercluster Donut Chart 
+
+<img src="/docs/cluster_donut.png" />
+
+### Taste Radar
+
+<img src="/docs/taste_radar.png" />
+
+### Grape-Style Chord
+
+<img src="/docs/chord.png" />
+
+### Food Pair Network 
+
+<img src="/docs/food_pair.png" />
 
 ## Available Scripts
 
@@ -14,11 +51,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -29,42 +61,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run deploy`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The app will be built and deployed via Github Pages on the URL specified as homepage in package.json
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
