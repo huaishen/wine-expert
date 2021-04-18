@@ -12,7 +12,8 @@ var type_data = {
         'Malbec',
         'Côte de Nuits Red',
         'Shiraz',
-        'Merlot',],
+        'Merlot',
+        'Côte de Beaune Red',],
     2: ['Chardonnay',
         'Riesling',
         'Sauvignon Blanc',
@@ -64,6 +65,9 @@ var radarDescMap = { 1:{
 
     'Shiraz':
     'Shiraz wines are well known for their rich and juicy mid-palate. You can expect to taste flavours of pepper, spice and sweet red fruit.',
+
+    'Côte de Beaune Red':
+    'Produced in the southern half of the escarpment of the Côte d\'Or, named after the important town and wine centre of Beaune',
 
     'Merlot':
     'A varietal that sits smack dab in the middle of the red wine spectrum, with easy-drinking tannins and super-soft finish',},
