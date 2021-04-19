@@ -115,7 +115,7 @@ export default class RadialTree extends React.Component {
 
 
                 const g = svg.append("g")
-                    .attr("transform", "translate(" + (width -50)/ 2 + "," + (height-100) / 2 + ")")
+                    .attr("transform", "translate(" + (width - 100)/ 2 + "," + (height - 50) / 2 + ")")
                     .datum(chord(matrix));
 
                 const group = g.append("g")
@@ -202,7 +202,7 @@ export default class RadialTree extends React.Component {
 
 
                 var svgLegned = svg.append("g")
-                    .attr("transform", "translate(800,550)");
+                    .attr("transform", `translate(${width - 80},${height - 250})`);
 
                 var keys = [];
                 for (const key in colorScale) {
@@ -326,7 +326,7 @@ export default class RadialTree extends React.Component {
                         <h1 align="center">Grape - Style Chord</h1>
                         <div className="drawGrapeChart"></div>
                     </Grid>
-                    <Grid xs={0} item>
+                    <Grid  item>
                         <Grid
                         spacing={0}
                         direction="column"
