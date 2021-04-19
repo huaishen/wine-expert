@@ -21,9 +21,16 @@ In total, we have 4 sets of visualization - **Wine map, Taste radar, Grape-style
 #### Choropleth Map
 <img src="/docs/choropleth.png" />
 
+Interactions: 
+1. Clicking on any non-grey polygons will show a country-specific dashboard 
+2. Zoom in the map will show a markercluster donut chart
+
 #### Country-specific Dashboard 
 
 <img src="/docs/country_dashboard.png" />
+
+Interaction:
+Clicking on the node of dendrogram will change other components of the dashboard accordingly 
 
 #### Markercluster Donut Chart 
 
@@ -41,7 +48,11 @@ In total, we have 4 sets of visualization - **Wine map, Taste radar, Grape-style
 
 <img src="/docs/food_pair.png" />
 
-## Available Scripts
+Interactions:
+1. Clicking on a node will highlight the neighbors of the node.
+2. Clicking on a wine style node will show a button to show more information about the wine style. Clicking on the button will display a dialog box with some information about the wine style.
+
+## Local development & Deployment 
 
 In the project directory, you can run:
 
